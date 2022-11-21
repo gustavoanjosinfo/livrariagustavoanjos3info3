@@ -1,0 +1,3 @@
+from .autorserializer import AutorSerializer
+from .categoriaserializer import CategoriaSerializer
+from .editoraserializer import EditoraSerializer
