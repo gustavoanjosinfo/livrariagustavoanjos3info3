@@ -1,0 +1,5 @@
+from .autorserializer import AutorSerializer
+from .categoriaserializer import CategoriaSerializer
+from .editoraserializer import EditoraSerializer
+from .livroserializer import LivroSerializer
+from .livrodetailerializer import LivroDetailSerializer
