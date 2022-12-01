@@ -26,6 +26,8 @@ LANGUAGE_CODE = "pt-br"
 TIME_ZONE = "America/Sao_Paulo"
 
 
+AUTH_USER_MODEL = "core.Usuario"
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -33,13 +35,31 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt",
     "uploader",
     "drf_spectacular",
     "core",
+=======
+    'rest_framework',
+    'core',
+    'rest_framework_simplejwt',
+>>>>>>> 5f2b6d4eac6d76b3948e0560531bf86d57f3f0cf
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissions",
+    ],
+     "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+}
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -128,6 +148,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+<<<<<<< HEAD
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -153,3 +174,6 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "API para gerenciamento de livraria, incluindo endpoints e documentação.",
     "VERSION": "1.0.0",
 }
+=======
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+>>>>>>> 5f2b6d4eac6d76b3948e0560531bf86d57f3f0cf
