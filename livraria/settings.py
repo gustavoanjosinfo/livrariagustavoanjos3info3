@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -143,7 +144,7 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = "core.Usuario"
 
-MEDIA_URL = "http://localhost:8000/media/"
+MEDIA_URL = "https://gustavoanjosinfo.pythonanywhere.com/media/"
 MEDIA_ENDPOINT = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 FILE_UPLOAD_PERMISSIONS = 0o640
